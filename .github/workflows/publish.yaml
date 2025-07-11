@@ -1,0 +1,19 @@
+name: push-subtree
+on:
+  push:
+    branches: [main]          # trunk
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0      # subtree math needs full history
+      - name: split & push
+        run: |
+          dir=runeforge/public"
+          pub=git@github.com:jordanmrubin/FUTURE_TOKENS.git
+          git config --global user.email "jordan1337rubin@gmail.com"
+          git config --global user.name  "jordanmrubin"
+          rev=$(git subtree split --prefix="$dir" -q)
+          git push --force "$pub" "$rev":main
