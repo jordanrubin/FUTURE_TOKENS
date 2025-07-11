@@ -14,8 +14,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           dir=public
-          pub=git@github.com:jordanmrubin/FUTURE_TOKENS.git
+          pub=git@github.com:jordanrubin/FUTURE_TOKENS.git
           git config --global user.email "jordan1337rubin@gmail.com"
-          git config --global user.name  "jordanmrubin"
+          git config --global user.name  "jordanrubin"
           rev=$(git subtree split --prefix="$dir" -q)
-          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/jordanmrubin/FUTURE_TOKENS.git" "$rev":main
+          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/jordanrubin/FUTURE_TOKENS.git" "$rev":main
