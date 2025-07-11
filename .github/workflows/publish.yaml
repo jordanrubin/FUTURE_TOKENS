@@ -9,13 +9,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0      # subtree math needs full history
+      - name: add key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SUBTREE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+    ssh-keyscan github.com >> ~/.ssh/known_hosts
       - name: split & push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           dir=public
           pub=git@github.com:jordanrubin/FUTURE_TOKENS.git
           git config --global user.email "jordan1337rubin@gmail.com"
           git config --global user.name  "jordanrubin"
           rev=$(git subtree split --prefix="$dir" -q)
-          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/jordanrubin/FUTURE_TOKENS.git" "$rev":main
+          git push --force "$pub" "$rev":main
