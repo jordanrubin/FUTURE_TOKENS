@@ -22,4 +22,4 @@ jobs:
           git config --global user.email "jordan1337rubin@gmail.com"
           git config --global user.name  "jordanrubin"
           rev=$(git subtree split --prefix="$dir" -q)
-          git push --force "$pub" "$rev":main
+          git push --force "$pub" "$rev:refs/heads/main"
