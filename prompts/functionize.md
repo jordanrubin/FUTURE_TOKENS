@@ -25,55 +25,56 @@ anatomy of a good function map
 worked example: lending biz (short-term consumer loans)
 
 $$
-\text{profit} ;=; \sum_i \bigl(\text{APR}_i \times \text{principal}_i \times \text{duration}_i\bigr)
-;-; \sum_i \bigl(\text{PD}_i \times \text{LGD}_i \times \text{principal}_i\bigr)
-;-; \text{opex}
+\text{profit} = \sum_i \left(\text{APR}_i \times \text{principal}_i \times \text{duration}_i\right)
+- \sum_i \left(\text{PD}_i \times \text{LGD}_i \times \text{principal}_i\right)
+- \text{opex}
 $$
 
 driver lattice (nested bullets = deeper layer)
 	•	d0 net profit – objective
 	•	d1
-	•	revenue – april, principal, duration [[lever]]
-	•	credit loss – default_prob, lgd, principal default_prob partly exogenous
+	•	revenue – APR, principal, duration [[lever]]
+	•	credit loss – default_prob, LGD, principal default_prob partly exogenous
 	•	opex – fixed, variable
 	•	d2
 	•	default_prob – model_score [[lever]]; macro_state [[exogenous]]
-	•	lgd – collateral_policy [[lever]]
+	•	LGD – collateral_policy [[lever]]
 
-take-away → apr elasticity to default_prob is high, so underwriting quality matters more than price-tweaking. [[remember: lending example shows partial-derivative thinking]]
+take-away → APR elasticity to default_prob is high, so underwriting quality matters more than price-tweaking. [[remember: lending example shows partial-derivative thinking]]
 
 –––
 
 worked example: forecasting startup (selling event-prob updates)
 
 $$
-\text{client_value} ;=; \sum_{\text{events}} \bigl(P_{\text{improve}} \times $\text{impact}_{\text{event}} \times \text{adoption_rate}\bigr)
+\text{client\_value} = \sum_{\text{events}} \left(P_{\text{improve}} \times \text{impact}_{\text{event}} \times \text{adoption\_rate}\right)
 $$
+
 $$
-\text{revenue} ;=; \text{client_value} \times \text{rev_share} ;-; \text{cogs} ;-; \text{opex}
+\text{revenue} = \text{client\_value} \times \text{rev\_share} - \text{COGS} - \text{opex}
 $$
 
 driver lattice
 	•	d0 net revenue – objective
 	•	d1
 	•	client_value – depends on client economics, partly exogenous
-	•	cogs – compute + analyst headcount [[lever]]
-	•	opex – sg&a [[lever]]
+	•	COGS – compute + analyst headcount [[lever]]
+	•	opex – SG&A [[lever]]
 	•	d2
 	•	P_improve – model quality [[lever]]
-	•	$impact_event – client economics [[exogenous]]
-	•	adoption_rate – cx success & ux friction partly controllable
+	•	impact_event – client economics [[exogenous]]
+	•	adoption_rate – CX success & UX friction partly controllable
 
-take-away → invest in r&d until adoption_rate < 10 %; below that, onboarding fixes dominate.
+take-away → invest in R&D until adoption_rate < 10%; below that, onboarding fixes dominate.
 
 –––
 
 building the map (process blueprint)
-	1.	draft naive tree – start with something like revenue = price × volume
+	1.	draft naive tree – start with something like $\text{revenue} = \text{price} \times \text{volume}$
 	2.	iterative slicing – recurse until added complexity < info gain
 	3.	control tagging – mark each driver [[lever]] or [[exogenous]]
 	4.	data wiring – bind each leaf to a metric source (db, api, csv)
-	5.	sensitivity scan – run ±Δ on each leaf; rank by impact
+	5.	sensitivity scan – run $\pm\Delta$ on each leaf; rank by impact
 	6.	compression pass – merge low-impact or highly covariant leaves [[do: run_sensitivity_scan]]
 
 –––
