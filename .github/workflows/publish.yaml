@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0      # subtree math needs full history
       - name: split & push
         run: |
-          dir=runeforge/public"
+          dir=public
           pub=git@github.com:jordanmrubin/FUTURE_TOKENS.git
           git config --global user.email "jordan1337rubin@gmail.com"
           git config --global user.name  "jordanmrubin"
