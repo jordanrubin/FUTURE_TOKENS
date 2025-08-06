@@ -11,7 +11,7 @@ genre: reasoning
 
 ---
 
-## how it runs (≈ 3–10 min per pass)
+## how it runs
 
 1. **seed**  
    choose the starting object: a hypothesis, policy tweak, metaphor map `m(s→t)`, or observed event.
@@ -39,8 +39,6 @@ genre: reasoning
 7. **package**  
    output as a concise tree/list with assumptions and stop conditions.
 
-*(if you use the results to reprioritize or implement, that’s a compound with steering/control.)*
-
 ---
 
 ## knobs
@@ -66,6 +64,81 @@ genre: reasoning
 - during planning, to pre-mortem policy changes.  
 - in sensemaking, to surface non-obvious second-order effects.  
 - before communication, to anticipate counterarguments and failure modes.
+
+---
+## dimensionalization of ramify
+
+1) **seed crispness**  
+   is the starting claim/map/policy precise enough to propagate?
+   - 0.0 — vibe or multi-claim mush  
+   - 0.5 — single claim but fuzzy terms  
+   - 1.0 — one clear seed with defined scope & terms
+
+2) **operator coverage**  
+   use the right propagation tools (causal step, stock–flow, feedback, substitution/displacement, agent response)?
+   - 0.0 — one operator only  
+   - 0.5 — 2–3 operators used  
+   - 1.0 — all relevant operators appear at least once
+
+3) **constraints & ceilings**  
+   capacity, costs, latency, regulation, and norms bind branches?
+   - 0.0 — unconstrained fanfic  
+   - 0.5 — a few caps named  
+   - 1.0 — explicit ceilings on major branches + when they bind
+
+4) **equilibrium closure**  
+   close obvious loops (partial/general), not just forward-chain?
+   - 0.0 — pure DAG of doom  
+   - 0.5 — some loops closed  
+   - 1.0 — key feedback loops closed with plausible settle times
+
+5) **agent adaptivity (lucas check)**  
+   do actors react strategically to the change?
+   - 0.0 — agents frozen  
+   - 0.5 — reactive but naive  
+   - 1.0 — strategic responses + counter-moves modeled
+
+6) **latency map**  
+   timelines/lag structures explicit (what hits first vs later)?
+   - 0.0 — timeless blob  
+   - 0.5 — rough near/far tags  
+   - 1.0 — per-branch latency notes + gating dependencies
+
+7) **branch independence**  
+   avoid double-counting or collapsing distinct branches?
+   - 0.0 — duplicated stories, tangled edges  
+   - 0.5 — some deduping  
+   - 1.0 — orthogonalized branches; shared causes factored out
+
+8) **measurement plan (leading indicators)**  
+   detect reality early if a branch is real?
+   - 0.0 — no observables  
+   - 0.5 — qualitative tells  
+   - 1.0 — ≥2 leading indicators per top branch with thresholds
+
+9) **guardrails & mitigations**  
+   attach do-this-if-that guardrails to risky branches?
+   - 0.0 — shrug  
+   - 0.5 — generic cautions  
+   - 1.0 — branch-specific guardrails with triggers & actions
+
+10) **ranking & decision orientation**  
+    clear prioritization by EV/regret/minimax/robustness (pick one)?
+    - 0.0 — no ranking  
+    - 0.5 — hand-wavy ordering  
+    - 1.0 — explicit regime + ranked shortlist + why
+
+11) **uncertainty handling**  
+    carry priors/ranges or scenario bounds (not fake precision)?
+    - 0.0 — point guesses everywhere  
+    - 0.5 — qualitative likelihoods  
+    - 1.0 — ranges/priors or scenario buckets with notes
+
+12) **stop rule discipline**  
+    halt at a useful depth (or use marginal-gain cutoff)?
+    - 0.0 — infinite tree / analysis paralysis  
+    - 0.5 — arbitrary stop  
+    - 1.0 — stated rule: depth cap, trigger, or diminishing-returns cutoff
 
 ---
 
