@@ -11,7 +11,7 @@ genre: abstracting
 
 ---
 
-## how it runs (≈ 2–8 min)
+## how it runs
 
 1. **select source (s)**  
    pick a domain with robust, worked rules that meaningfully fits **t**.
@@ -32,7 +32,7 @@ genre: abstracting
    compress into a table/diagram/substitution kit others can apply without you.
 
 7. **probe (optional)**  
-   run representative rules from **s** through **m** to see what they predict/advise for **t**. adopting guidance is a **steering compound**, not part of metaphorization itself.
+   run representative rules from **s** through **m** to see what they predict/advise for **t**.
 
 ---
 
@@ -76,15 +76,57 @@ a compact **translation guide** `m(s → t)`—shareable and reusable—plus, op
 | attending physician | ticket owner       |
 | wait-time sla       | escalation trigger |
 
-**invariants (examples):**  
+**preserved structure (examples):**  
 - deteriorating vitals preempt fifo → rising error-rate preempts fifo  
 - stabilize before transport → apply minimal fix before reassignment  
 - handoff requires accountability → reassignment requires explicit owner ack
 
-**exclusions:**  
+**breakpoints (declare so the metaphor doesn't mislead):**  
 - mortality, legal consent, bedside ethics → not carried.
 
-**package:** 1-pager mapping + escalation rewrite. adopting the new policy is outside this move (steering/control compound).
+**dimensionalization of metaphorization**
+
+	1.	pillar integrity: do exclusions avoid cutting the beams the map stands on?
+
+	•	0.0 nukes a core transform
+	•	0.5 some bleed
+	•	1.0 exclusions are orthogonal to pillars
+
+	2.	counterpart clarity: unambiguous primitive mapping (1→1 or explicit 1→N with adapters)?
+
+	•	0.0 mushy “this ≈ that”
+	•	0.5 mostly crisp, a few hacks
+	•	1.0 crisp with documented degeneracy
+
+	3.	invariant set quality: preserved bits are operators/constraints (queues, budgets, feedback), not motifs
+
+	•	0.0 ornaments
+	•	0.5 roles/flows
+	•	1.0 core transforms that actually do work
+
+	4.	formal leverage: portable math/algos you can carry (little’s law, pid, bayes, stock–flow, s-curves)
+
+	•	0.0 none
+	•	0.5 heuristics + back-of-envelope
+	•	1.0 named equations/models relabeled cleanly
+
+	5.	adapter load (structural, not effort): how many/complex adapters to make types line up?
+
+	•	0.0 adapter spaghetti
+	•	0.5 a few shims
+	•	1.0 minimal, typed, local
+
+	6.	failure localization: do errors surface at the seam they’re caused (good metaphors fail noisily)?
+
+	•	0.0 errors smear everywhere
+	•	0.5 sometimes localized
+	•	1.0 seam-tight: breakpoints catch misuse
+
+	7.	scope & edge crispness: bounded region where the map holds + explicit edges
+
+	•	0.0 grand theory / toy slice
+	•	0.5 process-level
+	•	1.0 process↔system slice with named borders
 
 ---
 
@@ -104,4 +146,3 @@ a compact **translation guide** `m(s → t)`—shareable and reusable—plus, op
 
 - **dimensionalize** — score the map’s complexity, leverage, fidelity; pick the best among alternatives.  
 - **ramify** — unfold implications and second-order effects under `m`.  
-- **steering / control (compound)** — adopt the guidance and implement changes.
