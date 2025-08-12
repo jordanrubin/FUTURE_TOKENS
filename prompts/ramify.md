@@ -7,63 +7,81 @@ genre: reasoning
 
 ## what it is
 
-**ramify** takes a seed claim, mapping, or rule and pushes its consequences outward—first order, second order, and so on—until the branches hit constraints or equilibria. not about proving truth; about *enumerating implications* and making the downstreams explicit enough to test or act on.
+**ramify** takes a bounded premise set **P**—assumptions you agree to treat as **axioms for this pass**—and forward-chains all logically/causally necessary consequences until closure (or your depth/time cap). the result is a **closure sheet**: predictions, constraints, edge cases, red flags that *must* hold if **P** holds. no relitigating the premises mid-run.
+
+> mindset: “IF P, THEN everything that follows.”
 
 ---
 
 ## how it runs
 
-1. **seed**  
-   choose the starting object: a hypothesis, policy tweak, metaphor map `m(s→t)`, or observed event.
+1) **freeze P** — write the core statements crisply; note scope/horizon.  
+2) **choose a rule kit** — e.g., { ⇒, ∧, ¬ }, causal propagation, stock–flow, feedback, queueing (little’s law), bayes updates, domain heuristics.  
+3) **forward-chain** — apply rules to **P**, add any new sentence **Q** to the working set; iterate to fixed point or depth cap.  
+4) **cluster fallout** — bucket derived sentences: *obvious · novel · actionable · edge-case*.  
+5) **sanity filter** — eject trivial tautologies; flag contradictions (signals **P** clashes).  
+6) **package closure** — one-page bullet sheet (see outputs).  
+7) **(compound later)** — if you use the sheet to reprioritize or implement, that’s a separate *steering/control* compound.
 
-2. **operators**  
-   pick propagation tools appropriate to the seed:  
-   - causal step (if `x↑` then `y↓`)  
-   - accounting/stock–flow (inflow–outflow → level)  
-   - feedback (reinforcing / balancing)  
-   - substitution/displacement (pressure moves elsewhere)  
-   - agent response (incentives → behavior change)
+---
 
-3. **branch**  
-   generate immediate consequences (order-1). for each, repeat to order-2/3 as budget allows.
+## works from a sketch
 
-4. **check ceilings & frictions**  
-   apply constraints: capacity, costs, latency, regulation, norms. prune impossible branches.
+you don’t need a full map. a **minimal seed** is enough:
 
-5. **equilibrate**  
-   close obvious loops (partial or general equilibrium). note time-to-settle.
+- 2–4 **axioms** (e.g., invariants from a metaphor)  
+- 1–2 **exclusions** (do-not-port)  
+- scope + horizon
 
-6. **rate & sort**  
-   tag branches with {sign, magnitude, likelihood, latency, reversibility}. keep the top set.
+freeze that as **P** and chain. if you only have a rhyme, ask the model to propose **P** first (“extract 3 candidate invariants + 2 exclusions”), then ramify.
 
-7. **package**  
-   output as a concise tree/list with assumptions and stop conditions.
+---
+
+## outputs
+
+**A. closure sheet (canonical)**  
+- **predictions** (what you should observe first)  
+- **constraints** (caps, conservation, budgets)  
+- **edge cases** (where **P** breaks or flips sign)  
+- **red flags** (high-hazard branches)  
+- **tests** (leading indicators + falsifiers)
+
+**B. blog packaging (optional)**  
+- **obvious parallels to adopt now** (low risk, direct consequences)  
+- **import candidates** (non-native practices implied by **P**)  
+- **issues you’ll hit** (frictions/failure modes) + one-line mitigations
+
+either way, include a **monitoring plan** (indicators + thresholds) and 2–3 **guardrails** (*if IND > THR within T → ACTION*).
 
 ---
 
 ## knobs
 
-| knob                | range / values                                   | effect                                                   |
-|---------------------|---------------------------------------------------|----------------------------------------------------------|
-| **order depth**      | 1 → 2 → 3+                                        | how far consequences propagate                           |
-| **breadth**          | narrow → wide                                     | branching factor per node                                |
-| **mode**             | deterministic / probabilistic / adversarial       | inference stance                                         |
-| **horizon**          | immediate → short → long                          | time window considered                                   |
-| **equilibrium**      | none / partial / general                          | how much endogenous response you model                   |
-| **adaptivity**       | agents frozen → reactive → strategic              | sophistication of actor responses                        |
-| **constraints**      | soft hints → hard caps                            | strictness of ceilings/frictions                         |
-| **granularity**      | coarse handles → quantified deltas                | resolution of consequences                               |
-| **stop rule**        | depth cap / marginal-gain cutoff / contradiction  | when to halt propagation                                 |
-| **evaluation**       | expected value / worst-case / regret / robustness | how branches are ranked                                  |
+- **rule depth** — 1/2/3 hops; default 2.  
+- **necessity strictness** — must-follow vs may-follow (keep “may” in a side list).  
+- **operator mix** — logic vs causal vs stock–flow/feedback.  
+- **equilibrium pass** — close obvious loops; note settle time.  
+- **adversarial pass** — strategic agent responses + counter-moves.  
+- **stop rule** — depth cap or marginal-gain cutoff.
 
 ---
 
-## when to use
+## micro-example (tiny)
 
-- after a mapping or hypothesis, to see what it *forces*.  
-- during planning, to pre-mortem policy changes.  
-- in sensemaking, to surface non-obvious second-order effects.  
-- before communication, to anticipate counterarguments and failure modes.
+**P:** (1) worsening “vitals” preempt FIFO; (2) capacity finite; (3) every ticket has severity.  
+**closure (snippet):**  
+- prediction: queue length obeys little’s law (`L = λ W`).  
+- constraint: without a vitals signal, preemption can’t fire ⇒ false negatives.  
+- edge-case: capacity spikes force rationing or “deaths” (timeouts).  
+- actionable: must log “time since last touch” to compute vitals.
+
+---
+
+## pitfalls & hygiene
+
+- **combinatorial boom** — closure explodes → cap depth; narrow **P**.  
+- **blind rules** — you forgot queueing or feedback → pick the right kit first.  
+- **confirmation bias** — you toss unpleasant branches → add a red-team pass.
 
 ---
 ## dimensionalization of ramify
@@ -139,54 +157,3 @@ genre: reasoning
     - 0.0 — infinite tree / analysis paralysis  
     - 0.5 — arbitrary stop  
     - 1.0 — stated rule: depth cap, trigger, or diminishing-returns cutoff
-
----
-
-## micro-example
-
-**seed:** introduce a visible leaderboard for internal bug fixes.
-
-**order-1:**  
-- ↑ reporting rate; ↑ fix rate for easy bugs; ↑ attention to scoreable work.
-
-**order-2:**  
-- displacement: hard, ambiguous, or non-scoreable maintenance gets deferred.  
-- gaming: split issues, label inflation, cherry-picking “near done” items.  
-- morale bifurcation: race conditions between teams; blame-shifting on regressions.
-
-**order-3 / equilibrate:**  
-- counter-gaming rules spawn meta-work; throughput gains flatten at capacity.  
-- hidden debt accumulates in unmeasured reliability; incident frequency later spikes.  
-
-**constraints & ceilings:** reviewer bandwidth; CI minutes; human attention.  
-**ranking:** high-likelihood negative at 6–12 week latency: reliability debt.  
-**package:** short tree + monitoring plan: create “vitals” metrics for regressions, penalize splits, credit pair-work.
-
----
-
-## outputs
-
-- **ramification tree** (bulleted or diagram) with assumptions and stop rule.  
-- **test list**: leading indicators keyed to branches (what would move *first* if this branch is real).  
-- **risk/benefit table**: top branches by expected value or hazard.
-
----
-
-## common pitfalls & patches
-
-| pitfall              | symptom                                           | patch                                                        |
-|----------------------|----------------------------------------------------|--------------------------------------------------------------|
-| goodhart drift       | optimizing the proxy backfires                     | add counter-metrics; include adversarial agent responses     |
-| lucas critique miss  | policy “works” in model, fails in reality          | raise adaptivity; re-ramify with strategic actors            |
-| partial-eq bias      | ignores cross-market spillovers                    | step up equilibrium knob; include substitution pathways      |
-| infinite trees       | analysis paralysis                                 | enforce stop rule; dimensionalize to keep only high-leverage |
-| base-rate amnesia    | wild branches dominate                             | weight by priors; cap EV with uncertainty penalties          |
-
----
-
-## downstreams & compounding
-
-- **dimensionalize** — prioritize branches by leverage/clarity/EV; choose experiments.  
-- **steering (compound)** — update attention and priorities to track top branches.  
-- **control (compound)** — implement guardrails or pilots keyed to the test list.  
-- **rhyme / metaphorization** — if stuck, import cleaner structures to improve operators.
