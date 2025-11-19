@@ -1,14 +1,35 @@
 # Runeforge
 
-Runeforge collects small, composable prompts that the FUTURE TOKENS project can reuse as building blocks. Each file aims to capture a single reasoning move or pattern in plain language.
+Runeforge collects small, composable reasoning moves that can be reused as building blocks for AI-assisted thinking. Each skill captures a distinct cognitive operation in a clear, executable format.
 
-See the [FUTURE TOKENS Substack](https://jordanmrubin.substack.com/p/future-tokens) for the broader mission and philosophy behind these tokens.
+See the [FUTURE TOKENS Substack](https://jordanmrubin.substack.com/p/future-tokens) for the broader mission and philosophy.
 
-## Repository layout
+## Quick Start
 
-- `prompts/` – source markdown for new prompt patterns. These are the drafts and experiments.
-- `public/` – prompts promoted for publication. A GitHub workflow exports this subtree to the [FUTURE_TOKENS](https://github.com/jordanrubin/FUTURE_TOKENS) repo.
-- `.github/workflows/publish.yaml` – automation that pushes `public/` to the public mirror.
+→ **[SKILL.md](./SKILL.md)** — Master index of all available reasoning moves
 
-Additional prompts or writing tools should start life in `prompts/` and graduate to `public/` when ready to share.
+Each skill lives in its own directory with:
+- A main procedural definition (e.g., `ANTITHESIZE.md`)
+- Worked examples (`exemplars.md`)
+
+## Repository Structure
+
+```
+runeforge/
+  SKILL.md              ← Master index and skill catalog
+  antithesize/          ← Each skill in its own folder
+    ANTITHESIZE.md      ← Full procedural definition
+    exemplars.md        ← Worked examples
+  backchain/
+    BACKCHAIN.md
+    exemplars.md
+  [... one folder per skill]
+  archive/              ← Deprecated or experimental prompts
+```
+
+Skills include opposition techniques (antithesize), causal reasoning (backchain, simulate), exploration (diverge, recombine), synthesis, operationalization, and more.
+
+## Contributing
+
+New reasoning patterns should be added as directories following the established structure. See [SKILL.md](./SKILL.md) for the complete catalog and philosophy.
 
