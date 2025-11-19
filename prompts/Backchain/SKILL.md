@@ -1,6 +1,6 @@
 ---
 name: backchain
-description: backchain takes an observed phenomenon, claim, behavior, or pattern and works backward through multiple plausible upstream mechanisms, conditions, or drivers. it maps “what could produce this?” across several causal stories — including unknowns, noise, and speculative branches — without claiming any single true cause. unlike simulate (forward projection) or attack (failure search), backchain is retroductive: it infers backwards from effect to possible generator-processes.
+description: backchain takes an observed phenomenon, claim, behavior, or pattern and works backward through multiple plausible upstream mechanisms, conditions, or drivers. it maps “what could produce this?” across several causal stories — including unknowns, noise, and speculative branches — without claiming any single true cause. unlike simulate (forward projection) or attack (failure search), backchain is retroductive; it infers backwards from effect to possible generator-processes.
 ---
 
 ## tl;dr
