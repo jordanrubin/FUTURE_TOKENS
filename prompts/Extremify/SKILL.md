@@ -1,8 +1,8 @@
 ---
 name: extremify
-description: push a system, claim, mechanism, or premise to its **extreme regimes**—0, 1, ∞, max-load, min-load, adversary-adaptive, degenerate configurations—to reveal hidden structure, invariants, flips, and breakdowns. unlike simulate (temporal evolution) or attack (failure-mode hunting), extremify is *asymptotic reasoning*: inspect limit behavior to understand the shape of the underlying model.
+description: push a system, claim, mechanism, or premise to its extreme regimes—0, 1, unbounded, max-load, min-load, adversary-adaptive, degenerate configurations—to reveal hidden structure, invariants, flips, and breakdowns. unlike simulate (temporal evolution) or attack (failure-mode hunting), extremify is asymptotic reasoning -- inspect limit behavior to understand the shape of the underlying model.
 ---
-"s
+
 ## tl;dr
 
 **extremify ≠ test ≠ attack ≠ counterfactual**

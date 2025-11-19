@@ -1,6 +1,6 @@
 ---
 name: evidence
-description: move the target along the empirical axis: confirm ↔ disconfirm. collect, generate, and pressure-test observations—synthetic or web-sourced—to evaluate a claim’s empirical load-bearing structure.
+description: move the target along the empirical axis -- confirm ↔ disconfirm. collect, generate, and pressure-test observations—synthetic or web-sourced—to evaluate a claim’s empirical load-bearing structure.
 ---
 
 ## tl;dr
