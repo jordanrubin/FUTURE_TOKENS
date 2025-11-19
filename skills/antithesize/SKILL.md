@@ -15,7 +15,14 @@ antithesis is NOT just one thing. it's a menu of distinct moves:
 - **clarify values** → axiological inversion, performative mirror
 - **reframe** → axis shift, phenomenological counter, foil
 
-each move exerts different pressure. see full taxonomy below to pick the move that matches your purpose.
+**the move i've been teaching**: RIVAL THESIS (coherent alternative, standalone counter-model)
+
+- stands alone (comprehensible without reading original)
+- accepts same facts (but reinterprets valence)
+- reaches opposite conclusion
+- generates different action/recommendation
+
+this is ONE powerful move, but not the only one. see full taxonomy below.
 
 **critical upstream**: identify GENRE + PURPOSE first, then pick antithesis type.
 
@@ -36,7 +43,7 @@ different moves exert different kinds of pressure. pick based on what you're try
 **what**: full counter-model with different primitives/priors that fits data better
 **when**: you want replacement, not just teardown
 **example**: "preference isn't discovered—it's regime-generated. constraints create wants, not hide them."
-**note**: see below for a deep-dive example.
+**note**: this is the move i've been teaching in detail below.
 
 ### **objective flip** (same facts, different loss)
 
@@ -141,7 +148,7 @@ different moves exert different kinds of pressure. pick based on what you're try
 
 -----
 
-## rival thesis deep-dive
+## rival thesis deep-dive (the main move i've been teaching)
 
 **what**: a complete alternative worldview that stands alone, accepts same facts, reaches opposite conclusion.
 
