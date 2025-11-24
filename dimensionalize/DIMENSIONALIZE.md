@@ -233,7 +233,7 @@ Context determines relative importance:
 - Pre-exit → boost value capture weight
 
 ### Dimension Discovery via Rhyme
-Stuck on dimensions? Use the Rhyme move:
+Stuck on dimensions? Use the Rhyme skill:
 - "What is this decision structurally similar to?"
 - Import proven dimensions from analogous domain
 - Example: Career choice ← Athletic training ← Research project
@@ -241,11 +241,10 @@ Stuck on dimensions? Use the Rhyme move:
 ### Meta-Dimensionalization
 You can dimensionalize the dimensions themselves using F·L·C scores to validate your framework
 
-## Integration with Other Moves
+## Integration with Other Skills
 
-**Rhyme:** Find analogous systems, borrow their dimensions  
-**Metaphorize:** Port complete dimension frameworks across domains  
-**Constraint Relaxation:** Question which dimensions are truly fixed
+**Rhyme:** Find analogous systems, borrow their dimensions
+**Metaphorize:** Port complete dimension frameworks across domains
 
 ## Quality Checklist
 

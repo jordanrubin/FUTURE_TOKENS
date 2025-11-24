@@ -331,7 +331,7 @@ most of the time you want **replace** (rival thesis), which is the deep-dive bel
 
 use genre patterns above to guide structure.
 
-**if genre is ambiguous**: you may need FRAMESTORM first (separate skill) to generate candidate frames.
+**if genre is ambiguous**: you may need to explore multiple frames first.
 
 **if you chose other antithesis types** (refutation, adversarial, etc): genre may be less critical. skip to step 1.
 
@@ -603,15 +603,9 @@ fix: this is synthesis failure, not antithesis. antithesis must COMMIT to opposi
 
 -----
 
-## what comes after antithesis (synthesis is optional)
+## what comes after antithesis
 
-antithesis doesn't force synthesis. you have options:
-
-### **synthesize** (combine into new frame)
-
-- use thesis + antithesis as inputs to generate novel structure
-- requires both to have cruxes that can be resolved or reframed
-- see separate synthesis skill for how to do this
+antithesis doesn't force resolution. you have options:
 
 ### **partition** (thesis true on A, antithesis on B)
 
@@ -639,32 +633,22 @@ antithesis doesn't force synthesis. you have options:
 
 **deciding which**:
 
-- synthesis when cruxes are empirical (testable)
 - partition when contexts are legible (you can tell which you're in)
 - ensemble when switching costs are low
 - lexicographic when one objective is constraint, other is goal
 - incommensurable when it's pure value conflict
 
-**key point**: don't force synthesis just because you have thesis + antithesis. sometimes "these are genuinely opposed and you have to choose" is the honest answer.
+**key point**: sometimes "these are genuinely opposed and you have to choose" is the honest answer.
 
 -----
 
 ## integration with other skills
 
-**upstream**:
+**related skills**:
 
-- **framestorm**: generates candidate frames when genre ambiguous
 - **rhyme**: finds patterns to guide mechanism-swap
-
-**downstream**:
-
-- **synthesis**: uses antithesis outputs (failure_modes, cruxes) as inputs
 - **dimensionalize**: turns axes into scoreable dimensions
-
-**parallel**:
-
-- **metaphorization**: can inform counter_model generation
-- **question-gym**: can probe cruxes interactively
+- **metaphorize**: can inform counter_model generation
 
 -----
 

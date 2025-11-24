@@ -479,24 +479,6 @@ Score the map's complexity, leverage, fidelity; pick the best among alternative 
 2. Score each on the 9 quality dimensions
 3. Select highest-scoring map (≥0.7 on key dimensions)
 
-### Ramify
-Unfold implications and second-order effects under mapping `m`
-
-**Process:**
-1. Apply mapped rules to target domain
-2. Trace cascading consequences
-3. Identify non-obvious predictions
-4. Generate testable hypotheses
-
-### Instrument
-Wire the metric plan into dashboards/alerts; close the loop
-
-**Process:**
-1. Implement primary/secondary metrics
-2. Set up monitoring and alerts
-3. Define review cadence
-4. Create feedback loops for course correction
-
 ## Integration Protocol
 
 ### Rhyme → Metaphorize Pipeline

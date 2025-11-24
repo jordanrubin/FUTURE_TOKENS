@@ -9,7 +9,7 @@ description: Fast structural similarity detection that maps novel inputs onto kn
 
 **Rhyme** is fast structural similarity. It maps a novel input onto known patterns by echo, not deduction. The match may be visual, narrative, functional, or systemic—but it *feels* alike. Not true, not proven—just salient.
 
-Rhyme is upstream of metaphor, model, and ramify. It clusters, suggests, frames. Nothing more—but often the first real foothold.
+Rhyme is upstream of metaphor. It clusters, suggests, frames. Nothing more—but often the first real foothold.
 
 Claude should use this Skill when the user:
 - Explicitly asks to "rhyme" something
@@ -263,12 +263,6 @@ Once rhymes are generated, use these moves for deeper work:
 **Dimensionalize:** Filter rhymes for utility, leverage, clarity using the 11 quality dimensions
 
 **Metaphorize:** Build complete structural mapping from best rhyme candidate
-
-**Isomorph:** Formalize the structural correspondence mathematically
-
-**Ramify:** Unfold implications across the rhyme to generate predictions
-
-**Constraint Relaxation:** Question which rhymed constraints are essential vs contingent
 
 ## Integration Protocol
 
