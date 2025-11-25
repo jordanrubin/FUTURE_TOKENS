@@ -603,45 +603,6 @@ fix: this is synthesis failure, not antithesis. antithesis must COMMIT to opposi
 
 -----
 
-## what comes after antithesis
-
-antithesis doesn't force resolution. you have options:
-
-### **partition** (thesis true on A, antithesis on B)
-
-- "thesis works for personal decisions, antithesis for collective policy"
-- "thesis holds at small scale, antithesis at large scale"
-- specify boundary conditions precisely
-
-### **ensemble** (mixture-of-experts weighted by context)
-
-- weight thesis 0.7 in context C1, antithesis 0.7 in context C2
-- treat as portfolio: diversify across both views
-- useful when contexts shift frequently
-
-### **lexicographic priorities** (objective1 then objective2)
-
-- "first satisfy thesis (safety), then optimize antithesis (performance)"
-- "first hit antithesis floor (equity), then maximize thesis (efficiency)"
-- ordered constraints, not weighted combination
-
-### **declare incommensurable** (values conflict; pick a side)
-
-- if thesis and antithesis optimize different values with no common currency
-- acknowledge the trade, own your choice
-- don't pretend there's a "right answer"
-
-**deciding which**:
-
-- partition when contexts are legible (you can tell which you're in)
-- ensemble when switching costs are low
-- lexicographic when one objective is constraint, other is goal
-- incommensurable when it's pure value conflict
-
-**key point**: sometimes "these are genuinely opposed and you have to choose" is the honest answer.
-
------
-
 ## integration with other skills
 
 **related skills**:
