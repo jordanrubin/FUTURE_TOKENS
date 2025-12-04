@@ -1,5 +1,5 @@
 ---
-name: Future Tokens
+name: future-tokens
 description: Future Tokens is a collection of small, composable reasoning patterns designed to enhance AI-assisted thinking. Each "move" captures a distinct cognitive operation—from generating antitheses to mapping metaphors to dimensionalizing complex decisions.
 ---
 
