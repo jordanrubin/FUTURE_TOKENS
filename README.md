@@ -46,13 +46,23 @@ Future Tokens/
     DIMENSIONALIZE.md
   excavate/
     EXCAVATE.md
+  handlize/
+    HANDLIZE.md
+  inductify/
+    INDUCTIFY.md
   metaphorize/
     METAPHORIZE.md
+  negspace/
+    NEGSPACE.md
+  rhetoricize/
+    RHETORICIZE.md
   rhyme/
     RHYME.md
+  synthesize/
+    SYNTHESIZE.md
 ```
 
-Skills include opposition techniques (antithesize), framing and analysis (excavate, dimensionalize), exploration (metaphorize, rhyme), and more.
+Skills include opposition techniques (antithesize), framing and analysis (excavate, dimensionalize, negspace, rhetoricize), pattern extraction (inductify), exploration (metaphorize, rhyme), executable residue extraction (handlize), and integration (synthesize).
 
 ## Contributing
 
