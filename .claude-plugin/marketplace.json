@@ -1,0 +1,30 @@
+{
+  "name": "future-tokens",
+  "owner": {
+    "name": "Jordan Rubin",
+    "email": "noreply@github.com"
+  },
+  "metadata": {
+    "description": "Composable reasoning skills for AI-assisted thinking",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "future-tokens-skills",
+      "description": "10 composable reasoning moves: antithesize, excavate, dimensionalize, handlize, inductify, metaphorize, negspace, rhetoricize, rhyme, synthesize",
+      "source": "./",
+      "skills": [
+        "./antithesize",
+        "./dimensionalize",
+        "./excavate",
+        "./handlize",
+        "./inductify",
+        "./metaphorize",
+        "./negspace",
+        "./rhetoricize",
+        "./rhyme",
+        "./synthesize"
+      ]
+    }
+  ]
+}
