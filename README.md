@@ -8,7 +8,15 @@ See the [FUTURE TOKENS Substack](https://jordanmrubin.substack.com/p/future-toke
 
 ## Installation
 
-### Claude Code (Recommended)
+### One-Line Install (Recommended for Agents)
+
+```bash
+curl -sL https://raw.githubusercontent.com/jordanrubin/FUTURE_TOKENS/main/install.sh | bash
+```
+
+This installs all skills to `~/.claude/skills/` and creates `/skillname` commands.
+
+### Claude Code Marketplace
 
 Register as a marketplace and install:
 
@@ -16,8 +24,6 @@ Register as a marketplace and install:
 /plugin marketplace add jordanrubin/FUTURE_TOKENS
 /plugin install future-tokens-skills@future-tokens
 ```
-
-Or install skills manually to `~/.claude/skills/`.
 
 ### Claude.ai
 
@@ -48,6 +54,7 @@ Each skill lives in its own directory with:
 
 ```
 Future Tokens/
+  install.sh            ← One-line installer for agents
   SKILL.md              ← Master index and skill catalog
   LICENSE               ← CC BY 4.0 license
   TRADEMARK.md          ← Trademark usage guidelines
