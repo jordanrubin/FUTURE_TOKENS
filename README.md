@@ -8,11 +8,22 @@ See the [FUTURE TOKENS Substack](https://jordanmrubin.substack.com/p/future-toke
 
 ## Installation
 
-To install and use this skillset in Claude:
+### Claude Code (Recommended)
+
+Register as a marketplace and install:
+
+```bash
+/plugin marketplace add jordanrubin/FUTURE_TOKENS
+/plugin install future-tokens-skills@future-tokens
+```
+
+Or install skills manually to `~/.claude/skills/`.
+
+### Claude.ai
 
 1. **Download the Skillset**: Download this repository as a ZIP file (or clone it if you prefer).
 
-2. **Access Claude Settings**: 
+2. **Access Claude Settings**:
    - Navigate to `Settings` > `Capabilities` within Claude
    - Ensure that "Code execution and file creation" is enabled
    - Upgrade to Pro or higher (Skills are paid features; note I have no relationship with Anthropic)
@@ -40,26 +51,18 @@ Future Tokens/
   SKILL.md              ← Master index and skill catalog
   LICENSE               ← CC BY 4.0 license
   TRADEMARK.md          ← Trademark usage guidelines
+  .claude-plugin/       ← Marketplace configuration
+    marketplace.json
   antithesize/          ← Each skill in its own folder
+    SKILL.md            ← Skill definition (marketplace standard)
     ANTITHESIZE.md      ← Full procedural definition
   dimensionalize/
+    SKILL.md
     DIMENSIONALIZE.md
   excavate/
+    SKILL.md
     EXCAVATE.md
-  handlize/
-    HANDLIZE.md
-  inductify/
-    INDUCTIFY.md
-  metaphorize/
-    METAPHORIZE.md
-  negspace/
-    NEGSPACE.md
-  rhetoricize/
-    RHETORICIZE.md
-  rhyme/
-    RHYME.md
-  synthesize/
-    SYNTHESIZE.md
+  ...
 ```
 
 Skills include opposition techniques (antithesize), framing and analysis (excavate, dimensionalize, negspace, rhetoricize), pattern extraction (inductify), exploration (metaphorize, rhyme), executable residue extraction (handlize), and integration (synthesize).
