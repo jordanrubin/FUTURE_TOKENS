@@ -61,13 +61,10 @@ Future Tokens/
   .claude-plugin/       ← Marketplace configuration
     marketplace.json
   antithesize/          ← Each skill in its own folder
-    SKILL.md            ← Skill definition (marketplace standard)
     ANTITHESIZE.md      ← Full procedural definition
   dimensionalize/
-    SKILL.md
     DIMENSIONALIZE.md
   excavate/
-    SKILL.md
     EXCAVATE.md
   ...
 ```

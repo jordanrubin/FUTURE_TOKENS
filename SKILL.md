@@ -28,7 +28,6 @@ The following reasoning moves are available. Each skill is self-contained with i
 
 Each skill directory contains:
 
-- **SKILL.md** — Symlink to the main skill file (for marketplace compatibility)
 - **Main skill file** (e.g., `ANTITHESIZE.md`) — Complete procedural definition including:
   - When to use the skill
   - Step-by-step process
@@ -63,12 +62,11 @@ Future Tokens/
   .claude-plugin/       ← Marketplace configuration
     marketplace.json
   antithesize/
-    SKILL.md            ← Symlink to ANTITHESIZE.md
     ANTITHESIZE.md      ← Full procedural body
   dimensionalize/
-    SKILL.md → DIMENSIONALIZE.md
+    DIMENSIONALIZE.md
   excavate/
-    SKILL.md → EXCAVATE.md
+    EXCAVATE.md
   ...
 ```
 

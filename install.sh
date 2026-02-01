@@ -87,7 +87,9 @@ install_skill() {
     fi
 
     local target_dir="$SKILLS_DIR/$skill_name"
-    local target_file="$target_dir/SKILL.md"
+    local skill_basename
+    skill_basename=$(basename "$skill_file")
+    local target_file="$target_dir/$skill_basename"
 
     mkdir -p "$target_dir"
     cp "$skill_file" "$target_file"

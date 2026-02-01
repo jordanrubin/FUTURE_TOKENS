@@ -1,1 +1,0 @@
-METAPHORIZE.md
