@@ -1,13 +1,38 @@
 ---
 name: future-tokens
-description: Future Tokens is a collection of small, composable reasoning patterns designed to enhance AI-assisted thinking. Each "move" captures a distinct cognitive operation—from generating antitheses to mapping metaphors to dimensionalizing complex decisions.
+description: Every AI output has structural blind spots determined by the generation process itself. Future Tokens operations are named, composable instruments that target specific blind spots. They surface new information on every pass because expanding the output changes the blind spot geometry.
 ---
 
-# Future Tokens: Composable Reasoning Moves
+# Future Tokens: Corrective Instruments for AI Reasoning
 
-Future Tokens is a collection of small, composable reasoning patterns designed to enhance AI-assisted thinking. Each "move" captures a distinct cognitive operation—from generating antitheses to mapping metaphors to dimensionalizing complex decisions.
+Every AI output has structural blind spots. Coherence optimization suppresses gaps. Token-level generation locks in frames before alternatives are considered. Confidence distributes smoothly over claims that deserve scrutiny in different places. These aren't random errors — they're predictable artifacts of how generation works.
+
+Future Tokens operations are named, composable instruments that target specific blind spot types. Each one reliably surfaces information that the generation process systematically omits, because the blind spots are structural, not random. And they're generative — every pass changes the consideration space, shifting the blind spot geometry so the next pass finds new material.
 
 Part of the [FUTURE TOKENS](https://jordanmrubin.substack.com/p/future-tokens) project.
+
+## When to use
+
+If you just produced an output, it has predictable gaps. Match what you built to the operation that catches what it missed.
+
+| you just built…                    | it probably missed…                                                    | run this                |
+|------------------------------------|------------------------------------------------------------------------|-------------------------|
+| a questionnaire or survey          | questions you couldn't think to ask because coherence suppresses gaps   | @negspace               |
+| an evaluation plan or rubric       | hidden assumptions that must be true for it to work                     | @excavate               |
+| a recommendation or proposal       | the strongest case against your conclusion                              | @antithesize            |
+| a strategy or business case        | dimensions you're not scoring on                                        | @dimensionalize         |
+| a first draft of anything          | blind spots that coherence optimization created                         | @negspace               |
+| an analysis that feels complete    | the argument that should be there but isn't                             | @negspace               |
+| a set of options or alternatives   | structural diversity — variations on a theme instead of real branches   | @rhyme → @metaphorize   |
+| multiple competing analyses        | a unified frame that preserves what each one gets right                  | @synthesize             |
+
+## Key properties
+
+Three properties distinguish Future Tokens operations from generic "think harder" prompting:
+
+1. **Reliability** — operations work every time because they target structural features of generation, not random errors. Coherence suppression, frame lock, and confidence smoothing are always present in AI outputs, so instruments that target them always find material.
+2. **Generativity** — each pass surfaces new information because expanding the output changes the blind spot geometry. Run @negspace on an analysis, then run it again on the expanded version — the second pass finds different gaps. Diminishing returns are minimal.
+3. **Composability** — operations chain (e.g., @excavate → @antithesize → @synthesize) to produce analysis no single pass can reach. Each operation's output becomes well-formed input for the next, and the sequence matters: different orderings expose different structure.
 
 ## Core Skills
 
@@ -38,9 +63,11 @@ Each skill directory contains:
 
 ## Philosophy
 
+The core design goal: make cognitive operations **invocable on demand rather than sporadic**. Good reasoners sometimes check assumptions, sometimes steelman the opposition, sometimes look for what's missing. Future Tokens makes these operations named, procedural, and callable — transforming unreliable intuition into reliable instruments.
+
 These skills embody several principles:
 
-1. **Composability** — Skills can be chained and combined
+1. **Composability** — Skills chain and combine; each operation's output is well-formed input for others
 2. **Explicitness** — Each move has clear mechanics, not just vibes
 3. **Epistemic hygiene** — Built-in uncertainty tracking and failure mode awareness
 4. **Context efficiency** — Designed to minimize token waste while maximizing insight

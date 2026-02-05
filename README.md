@@ -1,6 +1,6 @@
 # Future Tokens
 
-Future Tokens collects small, composable reasoning moves that can be reused as building blocks for AI-assisted thinking. Each skill captures a distinct cognitive operation in a clear, executable format.
+Every AI output has structural blind spots. Coherence optimization suppresses gaps. Token-level generation locks in frames before alternatives are considered. Future Tokens operations are named, composable instruments that target specific blind spot types—surfacing information that the generation process systematically omits.
 
 This repository is formatted as a [Claude Skills](https://support.claude.com/en/articles/12512176-what-are-skills) skillset, allowing for seamless integration with Claude's capabilities.
 
@@ -69,7 +69,7 @@ Future Tokens/
   ...
 ```
 
-Skills include opposition techniques (antithesize), framing and analysis (excavate, dimensionalize, negspace, rhetoricize), pattern extraction (inductify), exploration (metaphorize, rhyme), executable residue extraction (handlize), and integration (synthesize).
+Skills target different blind spot types: opposition gaps (antithesize), hidden assumptions (excavate), missing dimensions (dimensionalize), conspicuous absences (negspace), rhetorical fulcrums (rhetoricize), cross-example patterns (inductify), structural echoes (rhyme, metaphorize), actionable handles (handlize), and position integration (synthesize).
 
 ## Contributing
 
