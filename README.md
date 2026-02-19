@@ -2,7 +2,7 @@
 
 Every AI output has structural blind spots. Coherence optimization suppresses gaps. Token-level generation locks in frames before alternatives are considered. Future Tokens operations are named, composable instruments that target specific blind spot types—surfacing information that the generation process systematically omits.
 
-This repository is formatted as a [Claude Skills](https://support.claude.com/en/articles/12512176-what-are-skills) skillset, allowing for seamless integration with Claude's capabilities.
+This repository is formatted as a [Claude Skills](https://support.claude.com/en/articles/12512176-what-are-skills) skillset, and the same skill definitions are compatible with Codex workflows.
 
 See the [FUTURE TOKENS Substack](https://jordanmrubin.substack.com/p/future-tokens) for the broader mission and philosophy.
 
